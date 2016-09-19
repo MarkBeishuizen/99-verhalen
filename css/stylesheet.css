@@ -1,0 +1,32 @@
+h1 {
+     font-size: 3em ;
+    text-align: center;
+}
+
+
+.detail p {
+    font-size: 1.7em ;   
+}
+
+.detail  h2 {
+    font-size: 1.8em ;   
+}
+
+.detail {
+    max-width: 48em;
+    min-width: 20em;
+    margin: auto;
+}
+
+.overzicht {
+    display: inline-block;
+    width: 24em;
+    margin: 0,6em;
+    border: solid;
+    border-radius: 20px;
+    box-shadow: 3px 3px #000000;
+    text-shadow: 1px 1px #DCDCDC;
+    transform: skewX(10deg);
+    transform: skewY(10deg);
+}
+
