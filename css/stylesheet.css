@@ -63,7 +63,7 @@ input  {
 }
 
 header {
-    flex-direction: row;
+    display: flex;
     padding: 4px 6px;
 }
 
@@ -90,6 +90,15 @@ header {
     width: 37px;
     height: 37px;
 }
+
+.account-container {
+    flex: 1;
+    text-align: right;
+    padding-top: 14px;
+    padding-right: 8px; 
+}
+
+
 
 .overzicht {
     display: inline-block;
