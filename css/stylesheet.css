@@ -1,8 +1,71 @@
-h1 {
-     font-size: 3em ;
-    text-align: center;
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family:"dfds-light";
 }
 
+@font-face {
+    font-family: "dfds-bold";
+    src: url(../fonts/dfds-bold.woff);
+}
+
+@font-face {
+    font-family: "dfds-light";
+    src: url(../fonts/dfds-light.woff);
+}
+
+h2 {
+    font-family: "dfds-bold";
+    color: white;
+    font-size: 1.1em;
+    background-color: rgb(133, 188, 233);
+    display: inline-block;
+    padding: 4px 9px;
+    position: relative;
+    height: 22px;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-family: "dfds-bold";
+    color: black;
+    font-size: 1.1em;
+    padding: 4px 9px;
+    height: 22px;
+    margin-bottom: 0;
+}
+
+input  {
+    margin: 4px 17px;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-family: "dfds-light";
+}
+
+.info {
+    color: #6D6F71;
+}
+
+.comments {
+    float: right;
+    padding-top: 12px;
+}
+
+.triangle::after {
+    content: '';
+    width: 0;
+    height: 0;
+    top: 0;
+    right: -15px;
+    border-left: 15px solid rgb(133, 188, 233);
+    border-bottom: 30px solid transparent;
+    position: absolute;
+}
+
+header {
+    flex-direction: row;
+    padding: 4px 6px;
+}
 
 .detail p {
     font-size: 1.7em ;   
@@ -18,15 +81,149 @@ h1 {
     margin: auto;
 }
 
-.overzicht {
-    display: inline-block;
-    width: 24em;
-    margin: 0,6em;
-    border: solid;
-    border-radius: 20px;
-    box-shadow: 3px 3px #000000;
-    text-shadow: 1px 1px #DCDCDC;
-    transform: skewX(10deg);
-    transform: skewY(10deg);
+.logo {
+    width: 170px;
+    height: 60px;
 }
 
+.account {
+    width: 37px;
+    height: 37px;
+}
+
+.overzicht {
+    display: inline-block;
+    width: 92%;
+    vertical-align: top;
+    border: solid #002B55 ;
+    box-sizing: border-box;
+    margin: 8px 4%;
+    height: auto;
+    padding: 0px 16px 20px 16px;
+    background-color: white;
+    font-family: "dfds-light";
+    font-size: 0.9em;
+    /*
+    box-shadow: 3px 3px #000000;
+    text-shadow: 1px 1px #DCDCDC;    
+    */
+}
+
+.filters {
+    height: 90px;
+    width: 100%;
+    background-color: #EEF0F1;
+    border-top: 5px solid black;
+    padding: 8px 10px;
+    box-sizing: border-box;
+}
+
+.filter-container-genre {
+    display: inline-block;
+}
+
+.filter-container-sorteren {
+    display: inline-block;
+}
+
+.filter-text {
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.filter {
+    padding: 5px 3px;
+    font-size: 0.9em;
+    font-family: "dfds-light";
+}
+
+.tablet-filters, .desktop-filters {
+    display: none;
+}
+
+.inhoud {
+    width: 100%;
+    background-color: #002B45;
+}
+
+.inhoud-aanmelding{
+    border-top: 5px solid black;
+    width: 100%;
+    height: 640px;
+    background-color: #EEF0F1;
+}
+
+.footer-aanmelding{
+    width: 100%;
+    height: 90px;
+    background-color: #002B45;   
+}
+
+
+.button-interactie {
+    background-color: #F6861F;
+    border: none;
+    color: white;
+    padding: 8px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 6px 2px 4px 2px; 
+    cursor: pointer;
+    font-family: "dfds-bold"
+}
+
+.button-navigatie {
+    background-color: #6D6F71;
+    border: none;
+    color: white;
+    padding: 8px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: "dfds-bold"
+}
+
+/* tablet */
+@media screen and (min-width: 720px) {
+    .overzicht {
+        width: 45%;
+        height: auto;
+        margin: 8px 2%;
+    }
+    .filter-container-genre{
+        display: none;
+    }
+    .tablet-filters {
+        display: block;
+    }
+    .filters {
+        height: 140px;
+    }
+    .inhoud-aanmelding{
+     text-align: center;
+    }
+    
+}
+
+/* desktop */
+@media screen and (min-width: 1200px) {
+    .overzicht {
+        width: 31%;
+        height: auto;
+        margin: 8px 1%;
+    }
+    .tablet-filters {
+        display: none;
+    }
+    .desktop-filters {
+        display: block;
+    }
+    .inhoud-aanmelding{
+     text-align: center;
+    }
+}

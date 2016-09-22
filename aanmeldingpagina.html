@@ -7,28 +7,33 @@
     </head>
     <body>
         <header>
-            <h1>Aanmeldingpagina</h1>
+            <a href="overzichtpagina.html"><img class="logo" src="image/logo.png" alt="logo" ></a>
         </header>
-        <form>
-            <p>Naam</p>
-            <input name="voornaam" placeholder="Voornaam" /><br>
-            <input name="tussenvoegsel" placeholder="Tussenvoegsel" /><br>
-            <input name="achternaam" placeholder="Achternaam" /><br>
-            
-            <p>Geboortedatum</p>
-            <!-- ik heb type tekst gebruikt omdat type="date" niet goed voor alle browsers werkt-->
-            <input type="tekst" name="geboortedatum" placeholder="dd/mm/yyyy"/><br>
-            
-            <p>Adres</p>
-            <input name="straatnaam" placeholder="Straatnaam" /><br>
-            <input type="number" name="postcodegetal" placeholder="1033"><input name="postcodeletter" placeholder="SC" /><br>
-            <input type="number" name="huisnummer" placeholder="huisnummer"><input name="toevoeging" placeholder="toevoeging" /><br>
-            <input type="email" placeholder="Email" /><br>
-            <input type="number" placeholder="telefoonnummer" /><br>
-            
-            <p>Wachtwoord</p>
-            <input name="wachtwoord" type="password" placeholder="Wachtwoord" /><br>
-            <button type="submit">aanmelden</button>
-        </form>
+        <div class="inhoud-aanmelding">
+            <h2 class="triangle">Meld je hier aan</h2>
+            <form class="aanmelden">
+                <h3>Naam</h3>
+                <input name="voornaam" placeholder="Voornaam" /><br>
+                <input name="tussenvoegsel" placeholder="Tussenvoegsel" /><br>
+                <input name="achternaam" placeholder="Achternaam" /><br>
+
+                <h3>Geboortedatum</h3>
+                <!-- ik heb type tekst gebruikt omdat type="date" niet goed voor alle browsers werkt-->
+                <input type="text" name="geboortedatum" placeholder="dd/mm/yyyy"/><br>
+
+                <h3>Adres</h3>
+                <input name="straatnaam" placeholder="Straatnaam" /><br>
+                <input type="number" name="postcodegetal" placeholder="1033"><input name="postcodeletter" placeholder="SC" /><br>
+                <input type="number" name="huisnummer" placeholder="huisnummer"><input name="toevoeging" placeholder="toevoeging" /><br>
+                <input type="email" placeholder="Email" /><br>
+                <input type="number" placeholder="telefoonnummer" /><br>
+
+                <h3>Wachtwoord</h3>
+                <input name="wachtwoord" type="password" placeholder="Wachtwoord" /><br>
+                <button class="button-interactie" type="submit">aanmelden</button>
+            </form>
+        </div>
+        <footer class="footer-aanmelding">
+        </footer>
     </body>
 </html>
