@@ -10,31 +10,67 @@
         <header>
             <a href="overzichtpagina.html"><img class="logo" src="image/logo.png" alt="logo" ></a>
         </header>
-        <div class="inhoud-aanmelding">
-            <h2 class="triangle">Meld je hier aan</h2>
-            <form class="aanmelden">
-                <h3>Naam</h3>
-                <input name="voornaam" placeholder="Voornaam" /><br>
-                <input name="tussenvoegsel" placeholder="Tussenvoegsel" /><br>
-                <input name="achternaam" placeholder="Achternaam" /><br>
+        <section class="login">
+            <form>
+                <fieldset>
+                    <legend>Meld je hier aan</legend>
+                        <ul>
+                            <li>
+                                <label for="voornaam">voornaam</label>
+                                <input name="voornaam" placeholder="Voornaam" id="voornaam"/>
+                            </li>
 
-                <h3>Geboortedatum</h3>
-                <!-- ik heb type tekst gebruikt omdat type="date" niet goed voor alle browsers werkt-->
-                <input type="text" name="geboortedatum" placeholder="dd/mm/yyyy"/><br>
+                            <li>
+                                <label for="tussenvoegsel">Tussenvoegsel</label>
+                                <input name="tussenvoegsel" placeholder="Tussenvoegsel" id="tussenvoegsel" />
+                            </li>
 
-                <h3>Adres</h3>
-                <input name="straatnaam" placeholder="Straatnaam" /><br>
-                <input type="number" name="postcodegetal" placeholder="1033"><input name="postcodeletter" placeholder="SC" /><br>
-                <input type="number" name="huisnummer" placeholder="huisnummer"><input name="toevoeging" placeholder="toevoeging" /><br>
-                <input type="email" placeholder="Email" /><br>
-                <input type="number" placeholder="telefoonnummer" /><br>
+                            <li>
+                                <label for="achternaam">Achternaam</label>
+                                <input name="achternaam" placeholder="Achternaam" id="achternaam" />
+                            </li>
 
-                <h3>Wachtwoord</h3>
-                <input name="wachtwoord" type="password" placeholder="Wachtwoord" /><br>
-                <button class="button-interactie" type="submit">aanmelden</button>
+
+
+                            <!-- ik heb type tekst gebruikt omdat type="date" niet goed voor alle browsers werkt-->
+                            <li>
+                                <label for="geboortedatum">Geboortedatum</label>
+                                <input type="text" name="geboortedatum" placeholder="dd/mm/yyyy" id="geboortedatum"/>
+                            </li>
+
+                            <li>
+                                <label for="straatnaam">Adress</label>
+                                <input name="straatnaam" placeholder="Straatnaam" id="straatnaam" />
+                            </li>
+
+                            <li><input type="number" name="postcodegetal" placeholder="1033"></li>
+
+                            <li><input name="postcodeletter" placeholder="SC" /></li>
+
+                            <li><input type="number" name="huisnummer" placeholder="huisnummer"></li>
+
+                            <li><input name="toevoeging" placeholder="toevoeging" /></li>
+
+                            <li>
+                                <label for="email">Gegevens</label>
+                                <input type="email" placeholder="Email" id="email" />
+                            </li>
+
+                            <li>
+                                <input type="number" placeholder="telefoonnummer" />
+                            </li> 
+
+                            <li>
+                                <label for="wachtwoord">Wachtwoord</label>
+                                <input name="wachtwoord" type="password" placeholder="Wachtwoord" id="wachtwoord" />
+                            </li>
+
+                            <li><button class="button-interactie" type="submit">aanmelden</button></li>
+                        </ul>     
+                </fieldset>
             </form>
-        </div>
-        <footer class="footer-aanmelding">
+        </section>
+        <footer class="footer-login">
         </footer>
     </body>
 </html>
