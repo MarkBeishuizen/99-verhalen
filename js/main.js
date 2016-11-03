@@ -10,3 +10,29 @@ for (var i = 0; i < articles.length; i++) {
     articles[i].addEventListener("mouseenter", toggleGlow);
     articles[i].addEventListener("mouseleave", toggleGlow);
 }
+
+var search = document.querySelector("header input");
+
+function toggleSelected (event) {
+    var search = event.target;
+    search.classList.toggle("selected");
+}
+
+search.addEventListener("focus", toggleSelected);
+search.addEventListener("focusout", toggleSelected);
+
+
+var buttons = document.querySelectorAll(".content article button");
+console.log(buttons);
+
+function toggleButtonHover (event) {
+    var button = event.target;
+    button.classList.toggle("hovering");
+}
+
+for (var i = 0; i < buttons.length; i++) {
+    console.log(buttons[i]);
+    buttons[i].addEventListener("mouseenter", toggleButtonHover);
+    buttons[i].addEventListener("mouseleave", toggleButtonHover);
+}
+

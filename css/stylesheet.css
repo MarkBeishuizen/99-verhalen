@@ -15,6 +15,14 @@ body, html {
     src: url(../fonts/dfds-light.woff);
 }
 
+.story-text-image {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto;
+    max-height: 100%;
+    
+}
+
 h2 {
     font-family: "dfds-bold";
     color: white;
@@ -52,11 +60,12 @@ input  {
 }
 
 .content article p:first-of-type,
-.content article a {
+.content article p:last-of-type {
     color: #6D6F71;
 }
 
-.content article a {
+.content article p:last-of-type {
+    margin: 0;
     float: right;
     padding-top: 0.75em;
 }
@@ -75,6 +84,7 @@ input  {
 header {
     display: flex;
     padding: 0.24em 0.37em;
+    border-bottom: 5px solid black; 
 }
 
 .detail p {
@@ -91,6 +101,32 @@ header {
     margin: auto;
 }
 
+header input {
+    margin-left: auto;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: #002B45;
+    background-image: url(../image/search-icon.png);
+    background-size: auto 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: none;
+    padding-left: 3.85em;
+    transition: width 0.7s, background-position 0.7s, background-color 0.4s, padding-left 0.7s;
+    border-radius: 1000em;
+    border: none;
+    box-shadow: 0 0.08em 0.1em 0.04em rgba(0, 0, 0, 0.57);
+    box-sizing: border-box;
+}
+
+header input.selected {
+    width: 15em;
+    background-position: 1.25em;
+    background-color: white;
+    padding-left: 1.35em;
+}
+
+
 .logo {
     width: 10.6em;
     height: 3.7;
@@ -102,6 +138,7 @@ header {
 }
 
 .account-container {
+    display: flex;
     flex: 1;
     text-align: right;
     padding-top: 0.87em;
@@ -135,7 +172,6 @@ header {
     height: 7em;
     width: 100%;
     background-color: #EEF0F1;
-    border-top: 5px solid black;
     padding: 0.5em 0.62em;
     box-sizing: border-box;
 }
@@ -190,7 +226,7 @@ select {
 }
 
 
-.content article button {
+.content article button, .button-interactie {
     background-color: #F6861F;
     border: none;
     color: white;
@@ -201,8 +237,19 @@ select {
     font-size: 1em;
     margin: 0.37em 0.12em 0.25em 0.12em; 
     cursor: pointer;
-    font-family: "dfds-bold"
+    font-family: "dfds-bold";
+    background-image: url(../image/2000px-Arrow_east.svg.png);
+    background-size: auto 55%;
+    background-position: -120%;
+    background-repeat: no-repeat;
+    transition: background-position 0.3s;
 }
+
+.content article button.hovering {
+    background-position: 84%;
+    color: transparent;
+}
+
 
 .filters fieldset button {
     background-color: #6D6F71;
