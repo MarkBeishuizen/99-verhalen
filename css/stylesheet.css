@@ -23,6 +23,12 @@ body, html {
     
 }
 
+h1 {
+    margin: 0.5em 0em 0.5em 0.5em;
+    font-size: 1.4em;
+}
+
+
 h2 {
     font-family: "dfds-bold";
     color: white;
@@ -32,7 +38,8 @@ h2 {
     padding: 0.24em 0.6em;
     position: relative;
     height: 1.37em;
-    margin-bottom: 0;
+    margin-bottom: 4em;
+    margin-left: -0.91em;
 }
 
 ul {
@@ -57,6 +64,7 @@ input  {
     font-size: 0.85em;
     font-family: "dfds-light";
     width: 80%;
+    height: 1.3em;
 }
 
 .content article p:first-of-type,
@@ -126,6 +134,18 @@ header input.selected {
     padding-left: 1.35em;
 }
 
+.content article img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: auto;
+    vertical-align: middle;
+    max-height: 7.5em;
+    object-fit: cover;
+    
+}
+
 
 .logo {
     width: 10.6em;
@@ -148,6 +168,7 @@ header input.selected {
 
 
 .content article {
+    position: relative;
     width: 96%;
     margin: 0.6em 2%;
     box-sizing: border-box;
@@ -185,7 +206,7 @@ header input.selected {
 }
 
 .filters fieldset p {
-    margin-top: 0;
+    margin-top: 0.75em;
     margin-bottom: 0.25em;
 }
 
@@ -199,12 +220,17 @@ select {
     display: none;
 }
 
+.mobile-filters {
+    display: block;
+}
+
 .content {
     justify-content: flex-start;
     flex-wrap: wrap;
-    display: flex;
+    display: inline-flex;
     width: 100%;
     background-color: #002B45;
+    vertical-align: top;
 }
 
 .login {
@@ -219,15 +245,26 @@ select {
     width: 100%;
 }
 
-.footer-login{
+.footer-login {
     width: 100%;
     height: 5.6em;
     background-color: #002B45;   
 }
 
 
-.content article button, .button-interactie {
-    background-color: #F6861F;
+/* http://stackoverflow.com/questions/17212094/fill-background-color-left-to-right-css */
+.download {
+    background: linear-gradient(to left, blue 50%, green 50%);
+    background-size: 200% 100%;
+    background-position:right bottom;
+    transition:all 2s;
+}
+
+.download.clicked {
+    background-position:left bottom;
+}
+
+.button-interaction, .download {
     border: none;
     color: white;
     padding: 0.5em 0.5em;
@@ -238,12 +275,22 @@ select {
     margin: 0.37em 0.12em 0.25em 0.12em; 
     cursor: pointer;
     font-family: "dfds-bold";
+}
+
+.button-interaction {
+    background-color: #F6861F;
     background-image: url(../image/2000px-Arrow_east.svg.png);
     background-size: auto 55%;
     background-position: -120%;
     background-repeat: no-repeat;
     transition: background-position 0.3s;
 }
+
+.button-interactie {
+    margin-left: 1em;
+}
+
+
 
 .content article button.hovering {
     background-position: 84%;
@@ -252,7 +299,7 @@ select {
 
 
 .filters fieldset button {
-    background-color: #6D6F71;
+    background-color: #002B45;
     border: none;
     color: white;
     padding: 0.5em 0.5em;
@@ -262,11 +309,43 @@ select {
     font-size: 1em;
     margin: 0.25em 0.12em;
     cursor: pointer;
-    font-family: "dfds-bold"
+    font-family: "dfds-bold";
 }
 
+
+.filters fieldset button:nth-of-type(1) {
+    background-color: #87bbe6;
+    
+}
+
+.filters fieldset button:nth-of-type(2) {
+    background-color: #5e8ac7;
+    
+}
+
+.filters fieldset button:nth-of-type(3) {
+    background-color: #446bb2;
+    
+}
+
+.filters fieldset button:nth-of-type(4) {
+    background-color: #304d9c;
+    
+}
+
+.filters fieldset button:nth-of-type(5) {
+    background-color: #273481;
+    
+}
+
+.filters fieldset button:nth-of-type(6) {
+    background-color: #252c60;
+    
+}
+
+
 /* tablet */
-@media screen and (min-width: 42em) {
+@media screen and (min-width: 46em) {
     .content article {
         height: auto;
         width: 47%;
@@ -280,21 +359,47 @@ select {
         display: block;
     }
     .filters {
-        height: 11em;
+        height: 8em;
     }
     
     .login form {
          width: 50%;   
     }
     
+    h1 {
+        margin: 0.5em 0em 0.5em 0.5em;
+        font-size: 2em; 
+    }
+    
+    select {
+        margin-left: 2em;
+        width: 5.6em;
+        height: 2.3em;
+    }
+    
+    .logo {
+        width: 12em;
+        height: 3.7;
+    }
+    
+}
+
+@media screen and (min-width: 61em) {
+    select {
+        margin-left: 2em;
+        width: 5.6em;
+        height: 2.3em;
+    }
+    
+    .filters fieldset button {
+        width: 5.8em;
+        margin: 0em 0.5em 0em 0.5em;
+    }
+
 }
 
 /* desktop */
-@media screen and (min-width: 75em) {
-    .content article {
-        height: auto;
-        width: 31%;
-    }
+@media screen and (min-width: 78em) {
     .tablet-filters {
         display: none;
     }
@@ -304,5 +409,29 @@ select {
     
     .login form {
         width: 33%;   
+    }
+    
+    .content {
+        width: 80%;
+    }
+    
+    .sidebar {
+        width: 20%;
+        display: inline-block;
+        vertical-align: top;
+        height: 42.0em;
+    }
+    
+    .filters fieldset button {
+        width: 5.7em;
+        margin: 0.25em 0.12em;
+    }
+    
+    .filters fieldset p {
+        margin-top: 1.5em;
+    }
+    
+    .filters fieldset p:nth-of-type(2) {
+        margin-top: 2.5em;
     }
 }
