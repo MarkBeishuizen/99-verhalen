@@ -67,6 +67,14 @@ input  {
     height: 1.3em;
 }
 
+.topbar {
+    transition: height 1s;   
+}
+
+.topbar.hidden {
+    height: 1.7em;
+}
+
 .content article p:first-of-type,
 .content article p:last-of-type {
     color: #6D6F71;
@@ -95,8 +103,14 @@ header {
     border-bottom: 5px solid black; 
 }
 
+.content p:nth-of-type(2) {
+    max-width: 26em;
+}
+
+
 .detail p {
-    font-size: 1.7em ;   
+    font-size: 1.7em ;
+    
 }
 
 .detail  h2 {
@@ -233,6 +247,12 @@ select {
     vertical-align: top;
 }
 
+.filters > p {
+    margin: 0;
+    margin-left: 0.1em;
+    margin-bottom: 0.2em;
+}
+
 .login {
     border-top: 0.31em solid black;
     width: 100%;
@@ -254,7 +274,7 @@ select {
 
 /* http://stackoverflow.com/questions/17212094/fill-background-color-left-to-right-css */
 .download {
-    background: linear-gradient(to left, blue 50%, green 50%);
+    background: linear-gradient(to left, #002B45 50%, green 50%);
     background-size: 200% 100%;
     background-position:right bottom;
     transition:all 2s;
@@ -264,7 +284,7 @@ select {
     background-position:left bottom;
 }
 
-.button-interaction, .download {
+.button-interaction, .download, .button-interaction-login {
     border: none;
     color: white;
     padding: 0.5em 0.5em;
@@ -286,8 +306,9 @@ select {
     transition: background-position 0.3s;
 }
 
-.button-interactie {
+.button-interaction-login {
     margin-left: 1em;
+    background-color: #F6861F;
 }
 
 
