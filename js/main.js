@@ -11,6 +11,7 @@ for (var i = 0; i < articles.length; i++) {
     articles[i].addEventListener("mouseleave", toggleGlow);
 }
 
+
 var search = document.querySelector("header input");
 
 function toggleSelected (event) {
@@ -20,6 +21,7 @@ function toggleSelected (event) {
 
 search.addEventListener("focus", toggleSelected);
 search.addEventListener("focusout", toggleSelected);
+
 
 
 var buttons = document.querySelectorAll(".button-interaction");
@@ -35,6 +37,7 @@ for (var i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("mouseleave", toggleButtonHover);
 }
 
+
 var buttons = document.querySelectorAll(".download");
 
 function activateDownloadAnimation (event) {
@@ -44,7 +47,7 @@ function activateDownloadAnimation (event) {
     }
     
     button.classList.add("clicked");
-    button.innerHTML = "Dowloaden...";
+    button.innerHTML = "Downloaden...";
     setTimeout(function() {
         button.innerHTML = "Gedownload"; 
     }, 2000);
@@ -56,3 +59,12 @@ for (var i = 0; i < buttons.length; i++) {
 }
 
 
+
+var collapseMenu = document.querySelector(".filters > p");
+var topbar = document.querySelector(".topbar");
+
+function hideMenu (event) {
+    topbar.classList.toggle("hidden");
+}
+
+collapseMenu.addEventListener("click", hideMenu);
