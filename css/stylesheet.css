@@ -72,7 +72,7 @@ input  {
 }
 
 .topbar.hidden {
-    height: 1.7em;
+    height: 2em;
 }
 
 .content article p:first-of-type,
@@ -142,7 +142,7 @@ header input {
 }
 
 header input.selected {
-    width: 15em;
+    width: 9em;
     background-position: 1.25em;
     background-color: white;
     padding-left: 1.35em;
@@ -204,7 +204,7 @@ header input.selected {
 }
 
 .filters {
-    height: 7em;
+    height: 8em;
     width: 100%;
     background-color: #EEF0F1;
     padding: 0.5em 0.62em;
@@ -250,7 +250,17 @@ select {
 .filters > p {
     margin: 0;
     margin-left: 0.1em;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 1.2em;
+    display: inline-block;
+}
+
+.filters > p:after {
+   content: "▲";
+}
+
+.filters.hidden > p:after {
+   content: "▼";
 }
 
 .login {
@@ -380,7 +390,7 @@ select {
         display: block;
     }
     .filters {
-        height: 8em;
+        height: 9em;
     }
     
     .login form {
@@ -402,6 +412,10 @@ select {
         width: 12em;
         height: 3.7;
     }
+    
+    header input.selected {
+    width: 13em;
+}
     
 }
 
